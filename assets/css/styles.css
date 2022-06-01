@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Outfit", sans-serif;
+  box-sizing: border-box;
+}
+
+p {
+  font-size: 18px;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  width: 100%;
+  background: #2f415b;
+}
+
+.page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #0d192b;
+  color: white;
+}
+
+.component {
+  width: 20rem;
+  background: #14253d;
+  padding: 1.44rem;
+  border-radius: 0.94rem;
+  display: grid;
+  gap: 1.56rem;
+}
+.component__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.component__row_fx-jc_start {
+  justify-content: flex-start;
+  gap: 0.94rem;
+}
+.component__col {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.component__content {
+  display: grid;
+  gap: 0.94rem;
+}
+
+.img-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.img-box__img {
+  width: 100%;
+  border-radius: 0.62rem;
+}
+.img-box__icon {
+  position: absolute;
+  z-index: 99999;
+}
+.img-box__bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 255, 247, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.62rem;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.img-box:hover .img-box__bg {
+  opacity: 1;
+}
+
+.h5 {
+  font-size: 1.35rem;
+}
+
+.para {
+  line-height: 1.7rem;
+  font-size: 1rem;
+  color: #8bacda;
+}
+.para_fw_300 {
+  font-weight: 300;
+}
+.para_fs_small {
+  font-size: 0.95rem;
+}
+
+.amount {
+  color: #00fff7;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.time-left {
+  color: #8bacda;
+  font-size: 0.95rem;
+}
+
+.avatar-img {
+  width: 2.06rem;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+}
+.link:hover {
+  color: #00fff7;
+}
+
+.attribution {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  background: #111;
+  padding: 10px;
+}
+.attribution p {
+  line-height: 22px;
+  font-size: 1rem;
+}
+.attribution a {
+  color: cyan;
+}
+.attribution a:hover {
+  color: red;
+}
+
+/*# sourceMappingURL=styles.css.map */

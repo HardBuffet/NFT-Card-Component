@@ -1,0 +1,243 @@
+@use "sass:color";
+
+// - Mobile: 375px
+// - Desktop: 1440px
+
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+$alpha: 99999;
+
+// palette
+$softBlue: hsl(215, 51%, 70%);
+$cyan: hsl(178, 100%, 50%);
+$white: hsl(0, 0%, 100%);
+$veryDarkBlueA: hsl(217, 54%, 11%);
+$veryDarkBlueB: hsl(216, 50%, 16%);
+$veryDarkBlueC: hsl(215, 32%, 27%);
+
+$pageBg: $veryDarkBlueA;
+$pageColor: $white;
+$cardBg: $veryDarkBlueB;
+$line: $veryDarkBlueC;
+$amount: $cyan;
+$paraColor: $softBlue;
+$timeLeft: $paraColor;
+$linkColor: $white;
+$linkColorHover: $cyan;
+$avatarImgBorderColor: $white;
+$imgBoxBgHover: color.change($cyan, $alpha: 0.5);
+
+// borders
+$avatarImgBorder: 1px solid $avatarImgBorderColor;
+
+// fonts
+$mainFont: "Outfit", sans-serif;
+$fw-300: 300;
+$fw-400: 400;
+$fw-600: 600;
+
+@mixin flex(
+  $center: false,
+  $ai: false,
+  $jc: false,
+  $jcVal: center,
+  $aiVal: center
+) {
+  display: flex;
+
+  @if $ai {
+    align-items: $aiVal;
+  }
+
+  @if $jc {
+    justify-content: $jcVal;
+  }
+
+  @if $center {
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+* {
+  $marPad: 0;
+
+  margin: $marPad;
+  padding: $marPad;
+  font: {
+    family: $mainFont;
+  }
+  box-sizing: border-box;
+}
+
+p {
+  font: {
+    size: 18px;
+  }
+}
+
+hr {
+  border: none;
+  height: 1px;
+  width: 100%;
+  background: $line;
+}
+
+.page {
+  @include flex($center: true);
+  min-height: 100vh;
+  background: $pageBg;
+  color: $pageColor;
+}
+
+.component {
+  width: 20rem;
+  background: $cardBg;
+  padding: 1.44rem;
+  border: {
+    radius: 0.94rem;
+  }
+  display: grid;
+  gap: 1.56rem;
+
+  &__row {
+    @include flex($ai: true, $jc: true, $jcVal: space-between);
+
+    &_fx-jc_start {
+      justify-content: flex-start;
+      gap: 0.94rem;
+    }
+  }
+
+  &__col {
+    @include flex($ai: true);
+    gap: 0.5rem;
+  }
+
+  &__content {
+    display: grid;
+    gap: 0.94rem;
+  }
+}
+
+.img-box {
+  $radius: 0.62rem;
+
+  @include flex($center: true);
+  position: relative;
+  &__img {
+    width: 100%;
+    border: {
+      radius: $radius;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    z-index: $alpha;
+  }
+
+  &__bg {
+    $equalSize: 100%;
+
+    @include flex($center: true);
+    background: $imgBoxBgHover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: $equalSize;
+    height: $equalSize;
+    border: {
+      radius: $radius;
+    }
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  &:hover .img-box__bg {
+    opacity: 1;
+  }
+}
+
+.h5 {
+  font: {
+    size: 1.35rem;
+  }
+}
+
+.para {
+  line-height: 1.7rem;
+  font: {
+    size: 1rem;
+  }
+  color: $paraColor;
+
+  &_fw_300 {
+    font: {
+      weight: 300;
+    }
+  }
+
+  &_fs_small {
+    font: {
+      size: 0.95rem;
+    }
+  }
+}
+
+.amount {
+  color: $amount;
+  font-weight: $fw-600;
+  font-size: 0.95rem;
+}
+
+.time-left {
+  color: $timeLeft;
+  font-size: 0.95rem;
+}
+
+.avatar-img {
+  width: 2.06rem;
+  border: $avatarImgBorder {
+    radius: 50%;
+  }
+}
+
+.link {
+  color: $linkColor;
+  text: {
+    decoration: none;
+  }
+  &:hover {
+    color: $linkColorHover;
+  }
+}
+
+// footer
+.attribution {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text: {
+    align: center;
+  }
+  background: #111;
+  padding: 10px;
+
+  p {
+    line-height: 22px;
+    font: {
+      size: 1rem;
+    }
+  }
+
+  a {
+    color: cyan;
+
+    &:hover {
+      color: red;
+    }
+  }
+}

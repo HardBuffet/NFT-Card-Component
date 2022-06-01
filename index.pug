@@ -1,0 +1,42 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset="UTF-8")
+    meta(meta name="viewport" content="width=device-width, initial-scale=1.0")
+    title Frontend Mentor | NFT preview card component
+    link(rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png")
+    link(rel="stylesheet" href="assets/css/styles.css")
+  body.page
+    header.component
+      a(href="#").img-box
+        img.img-box__img(src="images/image-equilibrium.jpg")
+        .img-box__bg
+          img.img-box__icon(src="images/icon-view.svg")
+      .component__content
+        h5.h5
+          a(href="#").link Equilibrium #3429
+        p.para.para_fw_300 Our Equilibrium collection promotes balance and calm.
+        .component__row
+          .component__col
+            img(src="images/icon-ethereum.svg")
+            span.amount 0.041 ETH
+          .component__col
+            img(src="images/icon-clock.svg")
+            span.time-left 3 days left
+        hr
+        footer.component__row.component__row_fx-jc_start
+          img.avatar-img(src="images/image-avatar.png")
+          p.para.para_fs_small Creation of
+            a(href="#").link
+              |
+              | Jules Wyvern
+    footer.attribution
+          p
+            | Challenge by
+            |
+            a(href="https://www.frontendmentor.io?ref=challenge" target="_blank") Frontend Mentor
+            | .
+            br
+            | Coded by
+            |
+            a(href="https://www.frontendmentor.io/profile/HardBuffet") HardBuffet

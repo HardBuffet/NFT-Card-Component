@@ -1,0 +1,33 @@
+{
+  "name": "nft-preview-card-component-main",
+  "version": "1.0.0",
+  "description": "nft card component from Frontend Mentor",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HardBuffet/NFT-Card-Component.git"
+  },
+  "keywords": [
+    "frontend",
+    "mentor",
+    "nft",
+    "card",
+    "css",
+    "html",
+    "bem",
+    "sass",
+    "pug"
+  ],
+  "author": "HardBuffet",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HardBuffet/NFT-Card-Component/issues"
+  },
+  "homepage": "https://github.com/HardBuffet/NFT-Card-Component#readme",
+  "dependencies": {
+    "prettier": "^2.6.2"
+  }
+}
