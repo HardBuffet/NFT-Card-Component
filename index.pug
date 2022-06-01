@@ -8,24 +8,23 @@ html(lang='en')
     link(rel="stylesheet" href="assets/css/styles.css")
   body.page
     header.component
-      a(href="#").img-box
-        img.img-box__img(src="images/image-equilibrium.jpg")
+      a(href="#" aria-label="Read more about Equilibrium").img-box
+        img.img-box__img(src="images/image-equilibrium.jpg" alt="")
         .img-box__bg
-          img.img-box__icon(src="images/icon-view.svg")
+          img.img-box__icon(src="images/icon-view.svg" alt="")
       .component__content
-        h5.h5
-          a(href="#").link Equilibrium #3429
+        a(href="#").link.a5 Equilibrium #3429
         p.para.para_fw_300 Our Equilibrium collection promotes balance and calm.
         .component__row
           .component__col
-            img(src="images/icon-ethereum.svg")
+            img(src="images/icon-ethereum.svg" alt="")
             span.amount 0.041 ETH
           .component__col
-            img(src="images/icon-clock.svg")
+            img(src="images/icon-clock.svg" alt="")
             span.time-left 3 days left
         hr
-        footer.component__row.component__row_fx-jc_start
-          img.avatar-img(src="images/image-avatar.png")
+        .component__row.component__row_fx-jc_start
+          img.avatar-img(src="images/image-avatar.png" alt="")
           p.para.para_fs_small Creation of
             a(href="#").link
               |
