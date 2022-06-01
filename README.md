@@ -11,11 +11,11 @@
 
 ### Screenshot
 
-![](./images/final-project-desktop)
+![](./images/final-project-desktop.png)
 
 ### Links
 
-- Live Site URL: [GitHub Pages]()
+- Live Site URL: [GitHub Pages](https://hardbuffet.github.io/NFT-Card-Component/)
 
 ## My process
 
